@@ -16,7 +16,7 @@
         </form>
 
         <ul>
-            {{range .Tasks}} // Loops through tasks
+            {{range .Tasks}}
             <li>
                 {{.Text}} // Displays task text
                 <form action="/delete" method="POST" style="display: inline">
@@ -24,9 +24,9 @@
                     <button type="submit">Delete</button>
                 </form>
             </li>
-            {{else}} // If no tasks are avilable
+            {{else}}
             <li>No tasks available.</li>
-            {{end}} // End of task loop
+            {{end}}
         </ul>
     </div>
 </body>

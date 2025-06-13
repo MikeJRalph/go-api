@@ -16,17 +16,17 @@
         </form>
 
         <ul>
-            {{range .Tasks}}
+            {{range .Tasks}} // Loops through tasks
             <li>
-                {{.Text}}
+                {{.Text}} // Displays task text
                 <form action="/delete" method="POST" style="display: inline">
                     <input type="hidden" name="id" value="{{.ID}}">
                     <button type="submit">Delete</button>
                 </form>
             </li>
-            {{else}}
+            {{else}} // If no tasks are avilable
             <li>No tasks available.</li>
-            {{end}}
+            {{end}} // End of task loop
         </ul>
     </div>
 </body>
